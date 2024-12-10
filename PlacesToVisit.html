@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./PlacesToVisit.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Places To Visit in UK</title>
+
+
+</head>
+
+<body>
+
+    <header class="head">
+
+        <div class="navbar">
+           
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+          
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+           
+
+            <button class="signin-btn" onclick="redirecttopage()"> Sign In </button>
+
+            <!-- <button href="./SignIn.html" class="signin-btn">Sign In</button> -->
+        </div>
+    </header>
+<script> 
+    function redirecttopage(){
+
+        window.location.href="./SignIn.html";
+    }
+</script>
+
+
+    <section class="slidehead">
+        <div class="slideshow">
+            <img id="slideshow-image" src="./images/banner7dec.jpg" alt="Slideshow Image">
+            
+            <!-- <img id="slideshow-image" src="./images/" alt="Slideshow Image"> -->
+            <div class="controls">
+                <button onclick="previousImage()"><img src="./images/arrow.png"></button>
+                <button onclick="nextImage()"><img
+                        src="./images/arrow_forward_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png">
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <h2 class="subtitle">City Tour </h2>
+        <div class="tour">
+            <div class="card"> 
+                <img src="./images/citytour2.jpg">
+                <span>
+                    <h3>London Eye River Cruise</h3>
+                    <p>
+
+                        from £29 per adult
+                    </p>
+                </span>
+            </div>
+
+
+            <div class="card">
+                <img src="./images/citytour1.jpg">
+                <span>
+                    <h3>Original Harry Potter Locations Tour - Guided Tour of London</h3>
+                    <p>from £25 per adult
+                    </p>
+                </span>
+            </div>
+
+
+            <div class="card">
+                <img src="./images/citytour3.jpg">
+                <span>
+                    <h3>Edinburgh Full Day Walking Tour With Castle Included -small group</h3>
+                    <p>from £25 per adult
+                    </p>
+
+                </span>
+            </div>
+
+
+            <div class="card">
+                <img src="./images/citytour5.jpg">
+                <span>
+                    <h3>Oxford Official University & City Tour</h3>
+                    <p>from £38 per adult
+                    </p>
+
+                </span>
+            </div>
+
+
+
+
+    </section>
+
+
+    <section>
+        <h2 class="subtitle">Bus Tour </h2>
+        <div class="tour">
+            <div class="card"> 
+                <img src="./images/harrypotter.jpg">
+                <span>
+                    <h3>Harry Potter Warner Bros. Studio Tour with Transport from London</h3>
+                    <p>
+
+                        from £105 per adult
+                    </p>
+                </span>
+            </div>
+
+
+            <div class="card">
+                <img src="./images/bustour2.jpg">
+                <span>
+                    <h3>London Christmas Lights Open-Top Bus Tour</h3>
+                    <p>from £25 per adult
+                    </p>
+                </span>
+            </div>
+
+
+            <div class="card">
+                <img src="./images/bustour3.jpg">
+                <span>
+                    <h3>London Christmas Lights Open-Top Bus Tour</h3>
+                    <p>from £25 per adult
+                    </p>
+
+                </span>
+            </div>
+
+
+            <div class="card">
+                <img src="./images/bustour4.jpg">
+                <span>
+                    <h3>Big Bus London Hop-On Hop-Off Tour & River Cruise</h3>
+                    <p>from £38 per adult
+                    </p>
+
+                </span>
+            </div>
+
+
+
+
+    </section>
+
+    <section class="sectiongallery">
+      
+
+        <div>
+            <h2 class="heading"> Photo Gallery</h2>
+          
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="box col2" style="background-image: url('./images/grid6.jpg');">
+            </div>
+            <div class="box" style="background-image: url('./images/newgrid1.jpg');"></div>
+            <div class="box" style="background-image: url('./images/newgrid2.jpg');"></div>
+            <div class="box " style="background-image: url('./images/newgrid3.jpg');"></div>
+            <div class="box " style="background-image: url('./images/newgrid4.jpg');"></div>
+            <div class="box" style="background-image: url('./images/newgrid5.jpg');"></div>
+            <div class="box col2" style="background-image: url('./images/newgridbus.jpg');"></div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        
+        const images = [
+            "./images/banner7dec.jpg",
+            "./images/banner8dec.jpg",
+            "./images/banner8dec2.jpg",
+            "./images/banner8dec4.jpg",
+            "./images/banner8dec5.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        // Function to show the current image
+        function showImage(index) {
+            const imageElement = document.getElementById("slideshow-image");
+            imageElement.src = images[index];
+        }
+
+        // Function to go to the next image
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Function to go to the previous image
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Auto-Slideshow
+        setInterval(nextImage, 3000); 
+    </script>
+  <footer class="footer">
+    <div class="footer-container">
+      
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="./PlacesToVisit.html">Places to Visit</a></li>
+                <li><a href="#hotels">Hotels</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-phone"></i> +44 1234 567 890</li>
+                <li><i class="fas fa-envelope"></i> wanderwise@traveluk.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> London, UK</li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+           
+            <a href="#"><i class="fa-brands fa-instagram"></i></a><hr>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p> &copy; 2024 Travel Your Dream Destination. All Rights Reserved By Rinki Darade .</p>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

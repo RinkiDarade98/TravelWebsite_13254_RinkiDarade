@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* body {
+
+
+    font-family: "Arial", serif;
+    font-weight: 700;
+
+
+
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./images/ukbanner3.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+#service{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-gap: 30px;
+    align-items: center;
+    text-align: left;
+    padding: 30px;
+    margin: 20px;
+
+}
+
+.feature__card img {
+    max-width: 70px;
+  }
+
+  .feature__container {
+    display: grid;
+    gap: 30px;
+  }
+
+  .feature__card {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+  }
+
+  .feature__card h4 {
+    margin-bottom: 10px;
+    font-size: 20px ;  /*or 1.1 rem*/
+    font-weight: 600;
+    color: black;
+  }
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+
+}
+
+.logo {
+
+    width: 200px;
+    cursor: pointer;
+    background: transparent;
+
+}
+
+.navlinks li {
+
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+
+}
+
+.navlinks li a {
+
+    text-decoration: none;
+    color: ivory;
+
+}
+
+/*.register-btn {
+
+    background: white;
+    color: black;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+}*/
+
+.container {
+    padding: 0 7%;
+}
+
+.header h1 {
+    font-size: 50px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding-top: 22%;
+}
+
+
+.search-bar {
+
+    background: white;
+    width: 80%;
+    margin: 10px auto;
+    /*t,b,auto for l and r*/
+    padding: 6px 6px 6px 30px;
+    /* t,r,b,l*/
+    border-radius: 50px;
+
+
+}
+
+.search-bar form {
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.search-bar form input {
+    display: block;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+}
+
+.from {
+
+    flex: 1;
+}
+
+
+.location-input {
+
+    flex: 1;
+}
+
+/*if item1 has flex: 1;, so it takes up one part of the remaining space.
+    if item 2 has flex: 2;, so it takes up twice as much space as Item 1
+    Item 1 takes up one-third of the total width.
+    Item 2 takes up two-thirds of the total width.*/
+
+
+
+
+.date {
+
+    flex: 1;
+}
+
+.people {
+
+    flex: 1;
+}
+
+
+
+.search-bar form button {
+
+    background: #ff5362;
+
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.register-btn {
+
+    padding: 0.75rem 1.5rem;
+    /*need to check which is the root element */
+
+    font-size: 1rem;
+    font-weight: 600;
+
+
+
+    background: #ff5362;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background-color: darkred;
+}
+
+.search-bar form button img {
+
+    width: 40px;
+    margin: 7px;
+
+}
+
+.search-bar form button:hover {
+    background-color: darkred;
+
+}
+
+
+
+.search-bar form label {
+
+    font-weight: 600;
+
+}
+
+.subtitle {
+
+    margin: 50px 0 20px;
+    font-size: 3vw;
+    font-weight: 500;
+    color: black
+}
+
+.exclusives {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-gap: 30px;
+
+
+}
+
+.exclusives div img {
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.exclusives img:hover {
+    transform: scale(1.1);
+    /* Enlarge image on hover */
+}
+
+.exclusives div {
+    position: relative;
+
+}
+
+.exclusives div div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    color: aliceblue;
+
+}
+
+
+
+
+.trending{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+   
+}
+
+
+.trending-cards:hover {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+
+
+.trending-cards{
+
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+   
+    box-shadow: 0px 2px 4px lightslategray;
+    margin: 20px;
+    transition: transform 0.3s;
+
+}
+
+
+.trending-cards img{
+
+    width: 100%;
+    border-radius: 10px;
+  
+
+}
+
+
+.trending-cards div{
+
+padding: 10px;
+
+}
+
+
+.trending-cards h3{
+
+    font-size: 28px;
+   
+    padding: 10px;
+   
+}
+
+.trending-cards p{
+
+    color: #666;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+/* .trending div img {
+    width: 100%;
+    border-radius: 10px;
+
+} */
+
+
+
+
+/* ------------------- discount --------------------- */
+
+
+.discount {
+
+    margin: 80px 0;
+    /*80 from t and b ,0 from l and r */
+
+    /* background-image: linear-gradient(to right, #3f2321, gray),url("./images/ukbanner3.jpg"); */
+
+    background-image: linear-gradient(to right, rgba(17, 14, 13, 0.5), rgba(128, 128, 128, 0.5)), url("./images/ukbanner4.jpg");
+
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: #fff;
+
+
+}
+
+
+.discount-btn {
+
+    background: #ff5361;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    
+
+
+}
+
+.discount__container h2 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 500;
+    
+    color: white;
+  }
+  
+  .discount__container h2 span {
+    font-size: 2rem;
+  }
+  
+/* ---------------------testimonials--------------------------------- */
+
+.testimonals {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .testimonals-cards {
+    margin-bottom: 2rem;
+  }
+  
+  .testimonals-cards  p {
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .testimonals-cards  h1 {
+    
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+
+  .testimonials-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+
+  
+  .card p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .card hr {
+    width: 40px;
+    margin: auto;
+    color: lightblue;
+  }
+  
+  .card img {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border-radius: 100%;
+    border: 1px solid gray;
+  }
+  
+  .card .name {
+    font-size: 0.9rem;
+    font-weight: 400;
+   
+   
+  }
+  
+
+  /* Footer Styles */
+.footer {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 2rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-container > div {
+    
+    margin: 0.5rem;
+    min-width: 250px;
+}
+
+.footer-container h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #ff5362;
+}
+
+.footer-container p,
+.footer-container li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-container a:hover {
+    color: #ff5362;
+}
+
+.footer-contact ul li,
+.footer-social a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact ul li i {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #444444;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+
+  
